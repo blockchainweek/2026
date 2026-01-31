@@ -130,7 +130,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-2 sm:gap-4">
             <a
-              href="https://forms.fillout.com/t/6zcH1pfc4ius"
+              href="https://forms.fillout.com/t/gLPHswe7eVus"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-primary-500 rounded-lg text-white font-medium hover:opacity-90 transition-opacity hidden md:flex items-center gap-2 md:text-base text-sm"
@@ -139,7 +139,7 @@ export default function Home() {
               Submit Event
             </a>
             <a
-              href="https://forms.fillout.com/t/6zcH1pfc4ius"
+              href="https://forms.fillout.com/t/gLPHswe7eVus"
               target="_blank"
               rel="noopener noreferrer"
               title="Submit your event"
