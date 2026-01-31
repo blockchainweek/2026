@@ -39,8 +39,8 @@ interface ScheduleProps {
   events: EventType[];
 }
 
-const START_DATE = new BerlinDate("2025-06-07");
-const END_DATE = new BerlinDate("2025-06-22");
+const START_DATE = new BerlinDate("2026-06-08");
+const END_DATE = new BerlinDate("2026-06-21");
 const DAY_START_HOUR = 6; // Start at 6am
 const MINUTES_PER_CHUNK = 15;
 const CHUNK_HEIGHT = 10; // height in pixels for each 15-min chunk
