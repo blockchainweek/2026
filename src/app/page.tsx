@@ -87,7 +87,7 @@ function transformEvents(data: ResponseData): EventType[] {
   return transformedEvents as EventType[];
 }
 
-const EVENTS_FETCH_URL = "https://europe-west1-ethberlin-dystopian-faces.cloudfunctions.net/bbw2025-get-fillout-events";
+const EVENTS_FETCH_URL = "https://bbw2026-get-fillout-events-70148538155.europe-west1.run.app";
 
 export default function Home() {
   const [events, setEvents] = useState<EventType[]>([]);
@@ -116,7 +116,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex justify-between md:items-center">
           <div className="flex items-center gap-2 md:gap-4">
             <Image
-              src="/bbw25-logo.svg"
+              src="/bbw-2026.png"
               alt="Berlin Blockchain Week 2026 logo"
               width={64}
               height={64}
