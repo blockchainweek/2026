@@ -39,7 +39,7 @@ interface ScheduleProps {
   events: EventType[];
 }
 
-const START_DATE = new BerlinDate("2026-06-08");
+const START_DATE = new BerlinDate("2026-06-13");
 const END_DATE = new BerlinDate("2026-06-21");
 const DAY_START_HOUR = 6; // Start at 6am
 const MINUTES_PER_CHUNK = 15;
