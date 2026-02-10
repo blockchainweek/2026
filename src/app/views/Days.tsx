@@ -88,8 +88,8 @@ const Days: FC<DaysProps> = ({ events }) => {
               key={date}
               href={`#date-${date}`}
               className={`block ${
-                isToday ? "text-red-500" : "text-gray-300"
-              } hover:text-red-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-black bg-opacity-50`}
+                isToday ? "text-primary-500" : "text-gray-300"
+              } hover:text-primary-500 text-base transition-all hover:font-medium px-2 md:pr-4 py-[0.35rem] bg-black bg-opacity-50`}
             >
               <span className="flex flex-col items-center">
                 <span className="text-sm sm:text-lg">{day}</span>
