@@ -87,22 +87,15 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
 
           {/* Event Types */}
           <div className="flex flex-wrap gap-1 justify-center">
-            {event.eventTypes.slice(0, 2).map((type) => (
-              <span
-                key={type}
-                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getBadgeClasses(
-                  type
-                )}`}
-              >
-                <EventTypeIcon type={type} />
-                <span className="ml-1">{type}</span>
-              </span>
-            ))}
-            {event.eventTypes.length > 2 && (
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-700 bg-gray-800 text-gray-300">
-                +{event.eventTypes.length - 2}
-              </span>
-            )}
+            <span
+              key={event.eventType}
+              className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getBadgeClasses(
+                event.eventType
+              )}`}
+            >
+              <EventTypeIcon type={event.eventType} />
+              <span className="ml-1">{event.eventType}</span>
+            </span>
           </div>
         </div>
       </div>

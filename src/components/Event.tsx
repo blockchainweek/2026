@@ -36,7 +36,7 @@ const generateGoogleCalendarLink = (event: EventProps["event"]) => {
     event.venue ? `Venue: ${event.venue}` : "",
     event.venueAddress ? `Address: ${event.venueAddress}` : "",
     event.venueLink ? `Venue Link: ${event.venueLink}` : "",
-    `Event Type: ${event.eventTypes.join(", ")}`,
+    `Event Type: ${event.eventType}`,
     event.organizer ? `Organizer: ${event.organizer}` : "",
   ]
     .filter(Boolean)
@@ -130,17 +130,15 @@ const Event: FC<EventProps> = ({
                 )}
                 {!listView && (
                   <div className="mt-1 flex justify-center sm:justify-start flex-wrap gap-1">
-                    {event.eventTypes.map((type) => (
-                      <span
-                        key={type}
-                        className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getBadgeClasses(
-                          type
-                        )}`}
-                      >
-                        <EventTypeIcon type={type} />
-                        <span className="ml-1">{type}</span>
-                      </span>
-                    ))}
+                    <span
+                      key={event.eventType}
+                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getBadgeClasses(
+                        event.eventType
+                      )}`}
+                    >
+                      <EventTypeIcon type={event.eventType} />
+                      <span className="ml-1">{event.eventType}</span>
+                    </span>
                   </div>
                 )}
                 {/* Daily schedule display */}
@@ -176,17 +174,15 @@ const Event: FC<EventProps> = ({
               {/* Only show time on the right for non-list views */}
               {listView ? (
                 <div className="flex flex-col items-center gap-1 shrink-0">
-                  {event.eventTypes.map((type) => (
-                    <span
-                      key={type}
-                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getBadgeClasses(
-                        type
-                      )}`}
-                    >
-                      <EventTypeIcon type={type} />
-                      <span className="ml-1">{type}</span>
-                    </span>
-                  ))}
+                  <span
+                    key={event.eventType}
+                    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getBadgeClasses(
+                      event.eventType
+                    )}`}
+                  >
+                    <EventTypeIcon type={event.eventType} />
+                    <span className="ml-1">{event.eventType}</span>
+                  </span>
                 </div>
               ) : (
                 <div className="flex flex-col items-center sm:items-end shrink-0">

@@ -20,14 +20,12 @@ const EventsView: FC<EventsViewProps> = ({ events }) => {
 
   // Group events by type
   const groupedEvents = formattedEvents.reduce((acc, event) => {
-    event.eventTypes.forEach((type) => {
-      if (!acc[type]) {
-        acc[type] = [];
-      }
-      acc[type].push(event);
-    });
+    if (!acc[event.eventType]) {
+      acc[event.eventType] = [];
+    }
+    acc[event.eventType].push(event);
     return acc;
-  }, {} as Record<string, typeof formattedEvents>);
+  }, {} as Record<EventType["eventType"], typeof formattedEvents>);
 
   return (
     <div className="w-full max-w-7xl mx-auto">

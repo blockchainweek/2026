@@ -15,17 +15,17 @@ export default function EventsContainer({ events }: EventsContainerProps) {
   const [view, setView] = useState<"events" | "timeline" | "days">("events");
   const [selectedTypes, setSelectedTypes] = useState<Set<EventFormat>>(new Set(EVENT_TYPES));
 
-  const filteredEvents = events.filter((event) => event.eventTypes.some((type) => selectedTypes.has(type)));
+  const filteredEvents = events.filter((event) => selectedTypes.has(event.eventType));
 
   // Calculate event statistics
   const eventStats = {
     total: events.length,
     byType: EVENT_TYPES.reduce((acc, type) => {
-      acc[type] = events.filter((event) => event.eventTypes.includes(type)).length;
+      acc[type] = events.filter((event) => event.eventType === type).length;
       return acc;
     }, {} as Record<EventFormat, number>),
     filtered: filteredEvents.length,
-  };
+  };  
 
   const toggleEventType = (type: EventFormat) => {
     setSelectedTypes((prev) => {
