@@ -133,7 +133,7 @@ export default function Home() {
               href="https://forms.fillout.com/t/gLPHswe7eVus"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-primary-500 rounded-lg text-white font-medium hover:opacity-90 transition-opacity hidden md:flex items-center gap-2 md:text-base text-sm"
+              className="px-4 py-2 bg-primary-500 rounded-lg text-gray-900 font-medium hover:opacity-90 transition-opacity hidden md:flex items-center gap-2 md:text-base text-sm"
             >
               <LuCalendarPlus className="w-5 h-5" />
               Submit Event
@@ -143,7 +143,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               title="Submit your event"
-              className="px-2 py-2 bg-primary-500 rounded-lg text-white font-medium hover:opacity-90 transition-opacity flex md:hidden items-center gap-2 md:text-base text-sm"
+              className="px-2 py-2 bg-primary-500 rounded-lg text-gray-900 font-medium hover:opacity-90 transition-opacity flex md:hidden items-center gap-2 md:text-base text-sm"
             >
               <LuCalendarPlus className="w-5 h-5" />
             </a>

@@ -249,7 +249,7 @@ const Event: FC<EventProps> = ({
                 href={event.eventLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-md transition-colors"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-gray-900 font-medium rounded-md transition-colors"
               >
                 <FaLink className="w-4 h-4" />
                 Event Link
