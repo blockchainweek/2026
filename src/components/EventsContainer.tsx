@@ -99,7 +99,7 @@ export default function EventsContainer({ events }: EventsContainerProps) {
             <button
               onClick={() => setView("timeline")}
               className={`w-24 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                view === "timeline" ? "bg-primary-500 text-gray-900" : "text-gray-400 hover:text-white"
+                view === "timeline" ? "bg-primary-500 text-white" : "text-gray-400 hover:text-white"
               }`}
             >
               Timeline
@@ -107,7 +107,7 @@ export default function EventsContainer({ events }: EventsContainerProps) {
             <button
               onClick={() => setView("events")}
               className={`w-24 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                view === "events" ? "bg-primary-500 text-gray-900" : "text-gray-400 hover:text-white"
+                view === "events" ? "bg-primary-500 text-white" : "text-gray-400 hover:text-white"
               }`}
             >
               Events
@@ -115,7 +115,7 @@ export default function EventsContainer({ events }: EventsContainerProps) {
             <button
               onClick={() => setView("days")}
               className={`w-24 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                view === "days" ? "bg-primary-500 text-gray-900" : "text-gray-400 hover:text-white"
+                view === "days" ? "bg-primary-500 text-white" : "text-gray-400 hover:text-white"
               }`}
             >
               Days

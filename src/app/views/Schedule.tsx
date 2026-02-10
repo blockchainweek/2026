@@ -279,13 +279,13 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
               return (
                 <div
                   id="now-indicator"
-                  className="absolute w-full border-t-2 border-primary-500 z-30 animate-pulse"
+                  className="absolute w-full border-t-2 border-red-500 z-30 animate-pulse"
                   style={{
                     top: `${topPosition}px`,
-                    boxShadow: "0 0 8px rgba(254, 161, 0, 0.6)",
+                    boxShadow: "0 0 8px rgba(239, 68, 68, 0.6)",
                   }}
                 >
-                  <div className="absolute left-2 -top-6 bg-primary-500 text-gray-900 text-xs px-2 py-1 rounded font-medium">
+                  <div className="absolute left-2 -top-6 bg-red-500 text-white text-xs px-2 py-1 rounded font-medium">
                     Now
                   </div>
                 </div>
