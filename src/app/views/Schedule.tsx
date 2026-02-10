@@ -11,7 +11,7 @@ export interface EventType {
   totalDays: number;
   organizer: string;
   description: string;
-  eventTypes: ("Conference" | "Hackathon" | "Meetup" | "Party" | "Coworking" | "Happy Hour" | "Other")[];
+  eventType: ("Conference" | "Hackathon" | "Meetup" | "Party" | "Coworking" | "Happy Hour" | "Other");
   venue: string;
   venueAddress: string;
   venueLink?: string;
