@@ -112,20 +112,13 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
       const currentDate = BerlinDate.from(startDate);
       currentDate.setDate(currentDate.getDate() + index);
 
-      // Get the start and end times for this day from dailySchedule
       const daySchedule = event.dailySchedule[index];
-      let startTime = daySchedule?.startTime || "06:00";
+      const startTime = daySchedule?.startTime || "06:00";
       let endTime = daySchedule?.endTime || "23:59";
 
-      // If this is a next-day event
-      if (isNextDayEvent(startTime, endTime)) {
-        if (index === 0) {
-          // First day: keep start time, end at midnight
-          endTime = "23:59";
-        } else if (index === 1) {
-          // Second day: start at midnight, keep end time
-          startTime = "00:00";
-        }
+      const crossesMidnight = isNextDayEvent(startTime, endTime);
+      if (crossesMidnight) {
+        endTime = "23:59";
       }
 
       return {
@@ -135,7 +128,7 @@ const Schedule: FC<ScheduleProps> = ({ events }) => {
         currentDate: currentDate.toISOString(),
         startTime,
         endTime,
-        isNextDayEvent: isNextDayEvent(startTime, endTime),
+        isNextDayEvent: false,
       };
     });
   });
